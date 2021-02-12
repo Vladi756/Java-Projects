@@ -1,7 +1,7 @@
 package email.application;
 import java.util.Scanner;
 
-public class Email {
+public class Email {                                                // Class "email".
     private String firstName;
     private String lastName; 
     private String password;
@@ -10,7 +10,7 @@ public class Email {
     private String email;
     private String companySuffix = "company.com";
     private int defaultPasswordLength = 10;
-    private int mailboxCapacity = 500;
+    private int mailboxCapacity = 500;                              // Initializing and/or declaring all variables. 
     
     public Email(String firstName, String lastName) {
         this.firstName = firstName;
@@ -24,7 +24,7 @@ public class Email {
         email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + "." + companySuffix;
     }
     
-    private String setDepartment() {
+    private String setDepartment() {                                                                                                // Function to find users department.
         System.out.println("New worker " + firstName + " " +lastName + " Enter your department code:\n 1. for Sales \n "
                                              + "2. for Development\n "
                                              + "3. for Accounting \n "
@@ -44,7 +44,7 @@ public class Email {
                 return "N/A";
         }
     }
-    private String randomPassword(int length) {
+    private String randomPassword(int length) {                                                 // Generates random password.
         String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
         char[]pass = new char[length];
         
@@ -55,7 +55,7 @@ public class Email {
         return new String(pass);
     }
     
-    public void setMailboxCapacity(int capacity) {
+    public void setMailboxCapacity(int capacity) {  
         this.mailboxCapacity = capacity;
     }
     public void setAlternativeEmail(String altEmail) {
@@ -72,11 +72,11 @@ public class Email {
     }
     public String getPassword() {
         return password;
-    }
+    }                                                               // Simple, one line functions designed to either change something, or simply retrieve something.
     
     public String showInfo() {
         return "Display Name: " + firstName + " " + lastName +
                ".\nCompany Email: " + email + 
                ".\nMailbox Capacity: " + mailboxCapacity + "mb.";
     }
-}
+}                                                                  // Shows all the generated information about the user.
