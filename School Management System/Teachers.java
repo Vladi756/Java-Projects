@@ -23,7 +23,7 @@ public class Teachers {
     
     public int getID() {return id; }
     public String getName() {return name; }
-    public int getSalary() {return salary; }     // Functions to return every field. 
+    public int getSalary() {return salary; }            // Functions to return every field. (Getters) 
     
     public void recieveSalary(int salary) {
         salaryEarned += salary;
