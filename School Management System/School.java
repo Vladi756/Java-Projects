@@ -2,11 +2,7 @@ package school_management_system;
 import java.util.List;
 
 public class School {
-    
-    /*
-    Implementing an array list is like making a dynamic array.
-    */
-    
+
     private List<Teachers> teachers;
     private List<Students> students;
     private static int totalMoneyEarned;
@@ -37,7 +33,7 @@ public class School {
         return totalMoneySpent;
     }
 
-    // Setters 
+    // Setters
     
     public void addTeacher(Teachers teacher) {
         teachers.add(teacher);
