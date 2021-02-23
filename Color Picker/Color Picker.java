@@ -7,14 +7,14 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JColorChooser;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.JLabel;			// Neccessary imports.
 
-public class MyFrame extends JFrame implements ActionListener{
+public class Color_Picker extends JFrame implements ActionListener{
 	
 	JButton button;
 	JLabel label;
 
-	MyFrame() {
+	Color_Picker() {
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setLayout(new FlowLayout());				// Flow Layout neatly arranges all of the elements in the JFrame.
 		
@@ -25,7 +25,7 @@ public class MyFrame extends JFrame implements ActionListener{
 		label.setBackground(Color.white);
 		label.setText("Try changing the color of this text!");
 		label.setFont(new Font("Times New Roman", Font.BOLD, 75));
-		label.setOpaque(true);										// Creating and styling a label.
+		label.setOpaque(true);						// Creating and styling the label.
 		
 		this.add(button);
 		this.add(label);
@@ -34,12 +34,12 @@ public class MyFrame extends JFrame implements ActionListener{
 	}
 	
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) {				// Action listener method.
 		if(e.getSource()== button) {
 			JColorChooser colorChooser = new JColorChooser();
 			
 			Color color = JColorChooser.showDialog(null, "Pick a color", Color.black);
-			label.setForeground(color);						// Changes the texts color.
+			label.setForeground(color);							// Changes the texts color.
 		}
 		
 	}
