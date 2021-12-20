@@ -1,2 +1,3 @@
 # Java-Projects
-A collection of Java Projects ranging from easy to complex. The repository will constantly be updated.
+
+A collection of simple Java projects coded in my spare time. Nothing too serious - hopefully something piques your interest. 
